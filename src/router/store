@@ -1,0 +1,26 @@
+// store.js
+import { createStore } from "vuex";
+
+const isAuthenticated = localStorage.getItem("isAuthenticated") === "true";
+const store = createStore({
+  state: {
+    isAuthenticated: isAuthenticated,
+    // other state properties...
+  },
+  mutations: {
+    setAuthenticated(state, isAuthenticated) {
+      state.isAuthenticated = isAuthenticated;
+      localStorage.setItem(
+        "isAuthenticated",
+        isAuthenticated ? "true" : "false"
+      );
+    },
+    logout(state) {
+      state.isAuthenticated = false;
+    },
+    // other mutations...
+  },
+  // other Vuex store configurations like actions, getters, modules, etc.
+});
+
+export default store;

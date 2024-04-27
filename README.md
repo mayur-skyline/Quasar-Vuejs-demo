@@ -1,4 +1,4 @@
-# quasar-web (quasar-demo) with stor data with dbjosn Project README
+# quasar-web (quasar-demo) with store data with dbjosn Project README
 
 ## GraphQL Overview
 
